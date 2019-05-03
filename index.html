@@ -1,0 +1,145 @@
+<!doctype html>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <link rel="shortcut icon" href="./static/img/favicon.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <meta charset="utf-8">
+    <title>Parser Combinators</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <p class="title"><a href="https://github.com/croman96/parser-combinator" target="_blank">Parser Combinators</a></p>
+          <p class="subtitle">A small Scheme playground and a huge computational mathematics throwback.</p>
+          <p class="content">@<a href="https://github.com/croman96" target="_blank">croman96</a>, 2019.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l8 offset-l2">
+          <img src="./static/img/parser-combinator.png" alt="Super cool image.">
+        </div>
+        <div class="col s12 l6 offset-l3">
+          <p class="content">According to almighty <a href="https://en.wikipedia.org/wiki/Parser_combinator" target="_blank">Wikipedia</a>, a parser combinator is a higher-order function that accepts several parsers as input and returns a new parser as its output. <a href="http://polux.github.io/parsers/" target="_blank">(Photo: Polux)</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9">
+          <p class="subtitle">Content</p>
+          <p class="content">This project aims to help computer science students get familiarized or reinforce previous knowledge regarding parsers, which will be useful for further computer science courses including computational mathematics and compilers. The project consists of two main components: a script providing the essential tools for implementing a new parser for any given grammar and a website containing a brief introduction to parser combinators and an illustrative example using the parser generator within Mayor Goldberg’s parser for s-expressions to show the modular (functional) nature of the problem.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9 offset-l3">
+          <p class="subtitle text-right">Parsing</p>
+          <p class="content text-right">Parsing is the process of analysing a string of symbols, either in natural language, computer languages or data structures, conforming to the rules of a formal grammar. In this context, a parser is a function accepting strings as input and returning some structure as output, typically a parse tree or a set of indices representing locations in the string where parsing stopped successfully.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9 offset-l3">
+          <p class="subtitle text-right">Parser combinators?</p>
+          <p class="content text-right">A parsing combinator is a higher-order function that accepts several parsers as input and returns a new parser as its output. They can be used to combine basic parsers to construct parsers for more complex rules.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9">
+          <p class="subtitle">Introductory concepts.</p>
+          <p class="content"><strong>Grammar</strong></p>
+          <p class="content">A formal grammar is a set of production rules for strings in a formal language. The rules describe how to form strings from the language's alphabet that are valid according to the language's syntax.</p>
+          <p class="content">A formal grammar is a set of production rules for strings in a formal language. The rules describe how to form strings from the language's alphabet that are valid according to the language's syntax.Norman Chomsky proposed in the 1950’s a classic formalization of generative grammar consisting of the following components:</p>
+          <ol>
+            <li>Nonterminal/Terminal symbols.</li>
+            <li>Union functions.</li>
+            <li>Disjoint functions.</li>
+            <li>Concatenation functions.</li>
+            <li>Kleene star functions.</li>
+          </ol>
+        </div>
+        <div class="col s12 l9">
+          <p class="content"><strong>Union Set</strong></p>
+          <p class="content">The union of a collection of sets is the set of all elements in the collection.</p>
+          <img src="./static/img/union.png" alt="Union">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9">
+          <p class="content"><strong>Disjoint Set</strong></p>
+          <p class="content">In mathematics, two sets are said to be disjoint sets if they have no element in common. Equivalently, two disjoint sets are sets whose intersection is the empty set.</p>
+          <img src="./static/img/disjoint.png" alt="Union">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9">
+          <p class="content"><strong>Concatenation Set</strong></p>
+          <p class="content">For two sets of strings s1 and s2, the concatenation s1s2 consists of all strings of the form vw where v is a string from s1 and w is a string from s2.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9">
+          <p class="content"><strong>Kleene Star</strong></p>
+          <p class="content">Given a set of symbols or characters s, then the kleene star of the given s is the set of all strings over symbols in s, including the empty string ε.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9 offset-l3">
+          <p class="subtitle text-right">Ok, that's nice, but why should we use functional programming?</p>
+          <p class="content text-right">Parsers can be defined as functions, as this document stated previously, parser combinators take different parsers as input and generate new parsers by combining those rules. Lambda calculus enables the programmer to define structures and execute them using different type of inputs within the same structure. This flexibility enables the programmer to construct reusable structures which will take different types of parsers as input to perform the wanted.</p>
+          <p class="content text-right">In computer science grammars and other concepts are evaluated with mathematical rigour. Simplicity is always a principal focus but it must still be able to express any program (i.e. is Turing complete). For reasoning about imperative code, there are Turing machines. But for reasoning about functional programming, there is the 𝜆-calculus.</p>
+          <p class="content text-right">The basic 𝜆-calculus is simple and expressive. For example, the programmer doesn't need loops, because they can be simulated with recursion and memory is used more efficiently because it isn’t being used to store the state of all currently active variables.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l8 offset-l2">
+          <img src="./static/img/inception.jpg" alt="Super cool image.">
+        </div>
+        <div class="col s12 l6 offset-l3">
+          <p class="content center">Pretty much like this movie, isn't it? <a href="https://www.archdaily.mx/mx/623450/cine-y-arquitectura-inception/53b5d563c07a80a34300016c-cine-y-arquitectura-inception-imagen" target="_blank">(Photo: ArchDaily)</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9">
+          <p class="subtitle">Setup instructions</p>
+          <p class="content">Install <a href="https://jacksonisaac.wordpress.com/2014/03/25/installing-scheme-on-mac-os-x/" target="_blank">Scheme</a> and follow onscreen instructions.</p>
+          <p class="content">Download <a href="./static/scheme/parser-combinator.scm" download>parser-combinator.scm</a>.</p>
+          <p class="content">Download Mayer Goldberg's <a href="./static/scheme/parsing-combinators-sexprs.scm" download>parsing-combinators-sexprs.scm</a>.</p>
+          <p class="content">Update load function from parsing-combinators-sexpr.scm to match your parser-combinator.scm file location.</p>
+          <p class="content"><strong>(load “PATH/parser-combinator.scm”)</strong></p>
+          <p class="content">Run using the following command in your terminal:</p>
+          <p class="content"><strong>scheme --load  PATH/parsing-combinators-sexprs.scm</strong></p>
+          <p class="content">Now you can evaluate your own s-expressions as follows:</p>
+          <p class="content"><strong>(read-sexpr "(defun factorial (x) (if (zerop x) 1 (* x (factorial (- x 1)))))")</strong></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l9 offset-l3">
+          <p class="subtitle text-right">Understanding the script.</p>
+          <p class="content text-right"><strong>test</strong></p>
+          <p class="content text-right">This function checks if parser is able to construct an expression from given tokens. Uses the parser as a function and evaluates tokens. Returns the tokens that could be parsed successfully.</p>
+          <p class="content text-right"><strong>const</strong></p>
+          <p class="content text-right">This function recognizes expressions at character level and defines a constant. Receives a string to match and an optional postprocessor.</p>
+          <p class="content text-right"><strong>caten</strong></p>
+          <p class="content text-right">This function takes parsers as arguments and returns their catenation. Loops through each parser and catenates each parser with the next one in a list.</p>
+          <p class="content text-right"><strong>disj</strong></p>
+          <p class="content text-right">This function takes parsers as arguments and returns their disjunction. Tries to parse given tokens with current parser, if it exits with success. If not, it evaluates the given tokens with the next parser. If it runs out of parsers, it failed.</p>
+          <p class="content text-right"><strong>star</strong></p>
+          <p class="content text-right">This function takes parser and optional postprocessor. Returns parser for grammar that matches list of zero or more strings matched by p.</p>
+          <p class="content text-right"><strong>plus</strong></p>
+          <p class="content text-right">This function does a variation of Kleene star. It omits the first term of the star union.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <br><br><br>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

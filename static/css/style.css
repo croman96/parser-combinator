@@ -1,0 +1,47 @@
+html {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 6.25rem;
+  line-height: 6.25rem;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+}
+
+.content {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem ;
+}
+
+/* Device = Low Resolution Tablets, Mobiles (Landscape) */
+
+@media (max-width: 767px) {
+  html {
+    font-size: 20px;
+  }
+}
